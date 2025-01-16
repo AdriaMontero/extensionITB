@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      height: 400px;
+    }
+    #chat-box {
+      height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .input-container {
+      display: flex;
+      align-items: center;
+    }
+    .input-container input {
+      flex: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    .input-container button {
+      padding: 5px;
+      background-color: white;
+      color: black;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .input-container button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h2>Chat</h2>
+  <div id="chat-box"></div>
+  <div class="input-container">
+    <input type="text" id="chat-input" placeholder="Enter message">
+    <button id="send-chat">Send</button>
+  </div>
+  <script src="popup3.js"></script>
+</body>
+</html>

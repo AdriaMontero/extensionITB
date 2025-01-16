@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comandos de Red</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 10px;
+      width: 200px;
+      height: auto;
+    }
+    .section {
+      margin-bottom: 15px;
+    }
+    .section-title {
+      font-size: 14px;
+      color: #666;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    .command {
+      font-size: 12px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      margin-bottom: 5px;
+      cursor: pointer;
+      display: none; /* Initially hidden */
+    }
+    .command:hover {
+      background-color: #f0f0f0;
+    }
+    .command:active {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="section-title" onclick="toggleSection('ip-puertos')">IP Puertos</div>
+    <div class="command ip-puertos">int (puerto)</div>
+    <div class="command ip-puertos">ip address (ip+1) (mascara)</div>
+    <div class="command ip-puertos">no sh</div>
+  </div>
+  <div class="section">
+    <div class="section-title" onclick="toggleSection('pool-dhcp')">Pool DHCP</div>
+    <div class="command pool-dhcp">int (puerto)</div>
+    <div class="command pool-dhcp">ip dhcp pool (nombre)</div>
+    <div class="command pool-dhcp">network (ip) (mascara)</div>
+    <div class="command pool-dhcp">default-router (ip+1)</div>
+  </div>
+  <div class="section">
+    <div class="section-title" onclick="toggleSection('enrutamiento')">Enrutamiento</div>
+    <div class="command enrutamiento">ip route (ip destino) (mascara) (hop)</div>
+    <div class="command enrutamiento">exit</div>
+    <div class="command enrutamiento">wr</div>
+  </div>
+  <div class="section">
+    <div class="section-title" onclick="toggleSection('acl')">ACL</div>
+    <div class="command acl">access-list 100 deny ip (ip) (wildcard) host (host)</div>
+    <div class="command acl">access-list 100 permit ip any any</div>
+  </div>
+  <script src="popup2.js"></script>
+</body>
+</html>
